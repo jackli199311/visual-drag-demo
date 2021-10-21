@@ -1,5 +1,7 @@
 <template>
-    <button class="v-button">{{ propValue }}</button>
+    <div class="light" style="display:inline-flex">
+        <button class="btn">{{ propValue }}</button>
+    </div>
 </template>
 
 <script>
@@ -16,7 +18,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
+@import '../../node_modules/@eds/vanilla/button/styles.css';
+.btn {
+    flex-grow: 1;
+}
 .v-button {
     display: inline-block;
     line-height: 1;
@@ -35,16 +41,5 @@ export default {
     width: 100%;
     height: 100%;
     font-size: 14px;
-
-    &:active {
-        color: #3a8ee6;
-        border-color: #3a8ee6;
-        outline: 0;
-    }
-
-    &:hover {
-        background-color: #ecf5ff;
-        color: #3a8ee6;
-    }
 }
 </style>
