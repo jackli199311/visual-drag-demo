@@ -81,6 +81,20 @@ const list = [
             verticalAlign: 'middle',
         },
     },
+    {
+        component: 'Dropdown',
+        label: 'Dropdown',
+        style: { },
+    },
+    {
+        component: 'text-field',
+        label: 'Text field',
+        propValue: 'placeholder',
+        style: {
+            width: 100,
+            height: 34,
+        },
+    },
 ]
 
 for (let i = 0, len = list.length; i < len; i++) {

@@ -6,6 +6,8 @@ const components = [
     'VButton',
     'Group',
     'RectShape',
+    'Dropdown',
+    'TextField',
 ]
 
 components.forEach(key => {
