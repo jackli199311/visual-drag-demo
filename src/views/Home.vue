@@ -1,5 +1,15 @@
 <template>
     <div class="home">
+        <header class="sysbar">
+            <div class="title items-container">
+                <svg width="21" height="21">       
+                    <image xlink:href="../assets/favicon.svg" width="21" height="21"/>    
+                </svg>
+            </div>
+            <div class="title items-container">
+                <span class="product">Ericsson Low Code UI</span>
+            </div>
+        </header>
         <Toolbar />
 
         <main>
@@ -172,5 +182,35 @@ export default {
         text-align: center;
         color: #333;
     }
+}
+
+.items-container {
+    cursor: pointer;
+    align-self: center;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+}
+
+.sysbar {
+    justify-content: flex-start;
+    font-size: 14px;
+    color: #f2f2f2;
+    font-family: "Ericsson Hilda",Helvetica,Arial,sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-color: black;
+    display: flex;
+    height: 48px;
+    font-weight: 100;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.title {
+    font-weight: 500;
+    display: inline;
+}
+.product {
+    padding-left: 4px;
 }
 </style>
