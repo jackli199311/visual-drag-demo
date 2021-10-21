@@ -142,7 +142,7 @@ export default {
     background: #fff;
 
     main {
-        height: calc(100% - 64px);
+        height: calc(100% - 112px);
         position: relative;
 
         .left {
