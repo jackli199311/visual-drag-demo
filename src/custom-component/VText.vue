@@ -2,12 +2,12 @@
     <div v-if="editMode == 'edit'" class="v-text" @keydown="handleKeydown" @keyup="handleKeyup">
         <!-- tabindex >= 0 使得双击时聚集该元素 -->
         <div :contenteditable="canEdit" :class="{ canEdit }" @dblclick="setEdit" :tabindex="element.id" @paste="clearStyle"
-            @mousedown="handleMousedown" @blur="handleBlur" ref="text" v-html="element.propValue" @input="handleInput"
+            @mousedown="handleMousedown" @blur="handleBlur" ref="text" v-html="textToDisplay()" @input="handleInput"
             :style="{ verticalAlign: element.style.verticalAlign }"
         ></div>
     </div>
     <div v-else class="v-text preview">
-        <div v-html="element.propValue" :style="{ verticalAlign: element.style.verticalAlign }"></div>
+        <div v-html="textToDisplay()" :style="{ verticalAlign: element.style.verticalAlign }"></div>
     </div>
 </template>
 
@@ -24,6 +24,10 @@ export default {
         element: {
             type: Object,
         },
+        dataSource: {
+            type: String,
+            default: '',
+        },
     },
     data() {
         return {
@@ -38,6 +42,10 @@ export default {
         ]),
     },
     methods: {
+        textToDisplay() {
+            console.log(this.dataSource)
+            return this.dataSource ? this.$store.state.custom[this.dataSource] : this.element.propValue
+        },
         handleInput(e) {
             this.$emit('input', this.element, e.target.innerHTML)
         },

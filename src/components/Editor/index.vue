@@ -27,6 +27,8 @@
                 :is="item.component"
                 :style="getComponentStyle(item.style)"
                 :propValue="item.propValue"
+                :actionValue="item.actionValue"
+                :dataSource="item.dataSource"
                 :element="item"
                 :id="'component' + item.id"
             />
@@ -37,6 +39,7 @@
                 :is="item.component"
                 :style="getComponentStyle(item.style)"
                 :propValue="item.propValue"
+                :dataSource="item.dataSource"
                 @input="handleInput"
                 :element="item"
                 :id="'component' + item.id"
@@ -93,6 +96,7 @@ export default {
     mounted() {
         // 获取编辑器元素
         this.$store.commit('getEditor')
+        this.$store.state.custom = {}
 
         eventBus.$on('hideArea', () => {
             this.hideArea()

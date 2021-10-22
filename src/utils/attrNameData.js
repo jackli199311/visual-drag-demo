@@ -16,4 +16,6 @@ export default [
     { key: 'textAlign', label: '左右对齐' }, 
     { key: 'verticalAlign', label: '上下对齐' },
     { key: 'opacity', label: '透明度' }, 
+    { key: 'action', label: 'Action' },
+    { key: 'dataSource', label: 'Data source' },
 ]

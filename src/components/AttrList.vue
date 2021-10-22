@@ -37,6 +37,12 @@
             <el-form-item label="内容" v-if="curComponent && !excludes.includes(curComponent.component)">
                 <el-input type="textarea" v-model="curComponent.propValue" />
             </el-form-item>
+            <el-form-item label="Data Source">
+                <el-input type="text" v-model="curComponent.dataSource" />
+            </el-form-item>
+            <el-form-item label="Action">
+                <el-input type="textarea" v-model="curComponent.actionValue" />
+            </el-form-item>
         </el-form>
     </div>
 </template>

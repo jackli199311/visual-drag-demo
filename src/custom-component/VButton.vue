@@ -1,6 +1,6 @@
 <template>
     <div class="light" style="display:inline-flex">
-        <button class="btn">{{ propValue }}</button>
+        <button class="btn" @click="performAction">{{ propValue }}</button>
     </div>
 </template>
 
@@ -11,8 +11,24 @@ export default {
             type: String,
             default: '',
         },
+        actionValue: {
+            type: String,
+            default: '',
+        },
         element: {
             type: Object,
+        },
+        dataSource: {
+            type: String,
+            default: '',
+        },
+    },
+    methods: {
+        performAction() {
+            if (this.actionValue) {
+                this.$store.commit('updateSource', { key: this.actionValue, value: 'test' })
+                console.log(this.$store.state.custom[this.actionValue])
+            }
         },
     },
 }
