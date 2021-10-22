@@ -43,12 +43,12 @@ export default {
     },
     methods: {
         textToDisplay() {
+            console.log(this.dataSource)
             return this.dataSource ? this.$store.state.custom[this.dataSource] : this.element.propValue
         },
         handleInput(e) {
             this.$emit('input', this.element, e.target.innerHTML)
         },
-
         handleKeydown(e) {
             if (e.keyCode == this.ctrlKey) {
                 this.isCtrlDown = true

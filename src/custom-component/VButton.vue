@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     props: {
         propValue: {
@@ -29,11 +31,17 @@ export default {
     },
     methods: {
         performAction() {
-            if (this.action) {
+            if (this.action !== '') {
                 const values = this.action.split(' ')
-                switch (values[0]) {
+                switch (values[0].toLowerCase()) {
                     case 'api':
-                        this.$store.commit('updateSource', { key: this.targetValue, value: this.sendApiRequest(values[2]) })
+                        switch (values[1].toLowerCase()) {
+                            case 'get':
+                                this.getData(values[2])
+                                break
+                            case 'post':
+                                this.$store.commit('updateSource', { key: this.targetValue, value: this.sendApiRequest(values[2]) })
+                        }
                         break
                     default:
                         break
@@ -43,7 +51,13 @@ export default {
             }
         },
         sendApiRequest(url) {
+            console.log(this.dataSource)
             return 'Success.'
+        },
+        getData(url) {
+            // 'https://api.coindesk.com/v1/bpi/currentprice.json'
+            axios.get(url)
+            .then(response => (this.$store.commit('updateSource', { key: this.targetValue, value: response })))
         },
     },
 }
