@@ -7,7 +7,7 @@
                 </svg>
             </div>
             <div class="title items-container">
-                <span class="product">Ericsson Low Code UI</span>
+                <span class="product">Ericsson Smart UI Editor</span>
             </div>
         </header>
         <Toolbar />
