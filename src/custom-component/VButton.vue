@@ -29,10 +29,21 @@ export default {
     },
     methods: {
         performAction() {
-            if (this.targetValue) {
+            if (this.action) {
+                const values = this.action.split(' ')
+                switch (values[0]) {
+                    case 'api':
+                        this.$store.commit('updateSource', { key: this.targetValue, value: this.sendApiRequest(values[2]) })
+                        break
+                    default:
+                        break
+                }
+            } else if (this.targetValue) {
                 this.$store.commit('updateSource', { key: this.targetValue, value: 'test' })
-                console.log(this.$store.state.custom[this.targetValue])
             }
+        },
+        sendApiRequest(url) {
+            return 'Success.'
         },
     },
 }

@@ -27,18 +27,19 @@
             <!-- 右侧属性列表 -->
             <section class="right">
                 <el-tabs v-model="activeName">
-                    <el-tab-pane label="属性" name="attr">
+                    <el-tab-pane label="Properties" name="attr">
                         <AttrList v-if="curComponent" />
-                        <p v-else class="placeholder">请选择组件</p>
+                        <p v-else class="placeholder">Select a component</p>
                     </el-tab-pane>
-                    <el-tab-pane label="动画" name="animation">
+                    <!--
+                    <el-tab-pane label="Animation" name="animation">
                         <AnimationList v-if="curComponent" />
-                        <p v-else class="placeholder">请选择组件</p>
+                        <p v-else class="placeholder">Select a component</p>
                     </el-tab-pane>
-                    <el-tab-pane label="事件" name="events">
+                    <el-tab-pane label="Event" name="events">
                         <EventList v-if="curComponent" />
-                        <p v-else class="placeholder">请选择组件</p>
-                    </el-tab-pane>
+                        <p v-else class="placeholder">Select a component</p>
+                    </el-tab-pane> -->
                 </el-tabs>
             </section>
         </main>
@@ -59,7 +60,8 @@ import generateID from '@/utils/generateID'
 import { listenGlobalKeyDown } from '@/utils/shortcutKey'
 
 export default {
-    components: { Editor, ComponentList, AttrList, AnimationList, EventList, Toolbar },
+    // components: { Editor, ComponentList, AttrList, AnimationList, EventList, Toolbar },
+    components: { Editor, ComponentList, AttrList, Toolbar },
     data() {
         return {
             activeName: 'attr',

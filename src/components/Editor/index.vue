@@ -29,6 +29,7 @@
                 :propValue="item.propValue"
                 :targetValue="item.targetValue"
                 :dataSource="item.dataSource"
+                :action="item.action"
                 :element="item"
                 :id="'component' + item.id"
             />

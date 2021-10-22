@@ -18,8 +18,7 @@ const list = [
     {
         component: 'v-text',
         label: 'Text',
-        propValue: '双击编辑Text',
-        icon: 'wenben',
+        propValue: 'Double click to edit Text',
         style: {
             width: 200,
             height: 22,
@@ -35,7 +34,7 @@ const list = [
         component: 'v-button', 
         label: 'Button', 
         propValue: 'Button',
-        icon: 'button',
+        action: '',
         style: {
             width: 100,
             height: 34,
@@ -54,7 +53,6 @@ const list = [
     {
         component: 'Image', 
         label: 'Image', 
-        icon: 'tupian',
         propValue: require('@/assets/title.jpg'),
         style: {
             width: 300,
@@ -66,7 +64,6 @@ const list = [
         component: 'rect-shape',
         label: 'Rect',
         propValue: '&nbsp;',
-        icon: 'juxing',
         style: {
             width: 200,
             height: 200,

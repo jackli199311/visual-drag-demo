@@ -3,19 +3,19 @@
         <ul @mouseup="handleMouseUp">
             <template v-if="curComponent">
                 <template v-if="!curComponent.isLock">
-                    <li @click="copy">复制</li>
-                    <li @click="paste">粘贴</li>
-                    <li @click="cut">剪切</li>
-                    <li @click="deleteComponent">删除</li>
-                    <li @click="lock">锁定</li>
-                    <li @click="topComponent">置顶</li>
-                    <li @click="bottomComponent">置底</li>
-                    <li @click="upComponent">上移</li>
-                    <li @click="downComponent">下移</li>
+                    <li @click="copy">Copy</li>
+                    <li @click="paste">Paste</li>
+                    <li @click="cut">Cut</li>
+                    <li @click="deleteComponent">Delete</li>
+                    <li @click="lock">Lock</li>
+                    <li @click="topComponent">Top</li>
+                    <li @click="bottomComponent">Bottom</li>
+                    <li @click="upComponent">Up</li>
+                    <li @click="downComponent">Down</li>
                 </template>
-                <li v-else @click="unlock">解锁</li>
+                <li v-else @click="unlock">Unlock</li>
             </template>
-            <li v-else @click="paste">粘贴</li>
+            <li v-else @click="paste">Paste</li>
         </ul>
     </div>
 </template>

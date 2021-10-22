@@ -40,8 +40,8 @@
             <el-form-item label="Data Source">
                 <el-input type="text" v-model="curComponent.dataSource" />
             </el-form-item>
-            <el-form-item label="Target">
-                <el-input type="textarea" v-model="curComponent.targetValue" />
+            <el-form-item label="Target" v-if="hasTargetField.includes(curComponent.component)">
+                <el-input type="text" v-model="curComponent.targetValue" />
             </el-form-item>
             <el-form-item label="Action">
                 <el-input type="textarea" v-model="curComponent.action" />
@@ -57,6 +57,7 @@ export default {
     data() {
         return {
             excludes: ['Image', 'Group'], // 这些组件不显示内容
+            hasTargetField: ['v-button'],
             textAlignOptions: [
                 {
                     label: '左对齐',
