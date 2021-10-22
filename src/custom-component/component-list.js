@@ -86,14 +86,15 @@ const list = [
     {
         component: 'Dropdown',
         label: 'Dropdown',
-        style: { },
+        propValue: 'Dropdown menu',
+        style: { width: 150, height: 34 },
     },
     {
         component: 'text-field',
         label: 'Text field',
         propValue: 'placeholder',
         style: {
-            width: 100,
+            width: 200,
             height: 34,
         },
     },

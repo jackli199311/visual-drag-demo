@@ -20,4 +20,7 @@ export default {
 
 <style lang="css" scoped>
 @import '../../node_modules/@eds/vanilla/text-field/styles.css';
+input {
+    flex-grow: 1;
+}
 </style>

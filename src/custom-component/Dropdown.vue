@@ -1,11 +1,11 @@
 <template>
     <div class="light" style="display:inline-flex">
         <div class="dropdown" data-type="click">
-            <button class="btn clickable">Share report</button>
+            <button class="btn clickable">{{propValue}}</button>
             <div class="menu">
-                <div class="item">Download</div>
-                <div class="item">Copy link</div>
-                <div class="item">Mail to</div>
+                <div class="item">item1</div>
+                <div class="item">item2</div>
+                <div class="item">item3</div>
             </div>
         </div>
     </div>
@@ -33,23 +33,7 @@ export default {
 
 <style lang="css" scoped>
 @import '../../node_modules/@eds/vanilla/dropdown/styles.css';
-.v-button {
-    display: inline-block;
-    line-height: 1;
-    white-space: nowrap;
-    cursor: pointer;
-    background: #FFF;
-    border: 1px solid #DCDFE6;
-    color: #606266;
-    -webkit-appearance: none;
-    text-align: center;
-    box-sizing: border-box;
-    outline: 0;
-    margin: 0;
-    transition: .1s;
-    font-weight: 500;
-    width: 100%;
-    height: 100%;
-    font-size: 14px;
+.dropdown {
+    flex-grow: 1;
 }
 </style>
