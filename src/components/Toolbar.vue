@@ -3,7 +3,7 @@
         <div class="toolbar">
             <el-button @click="undo">撤消</el-button>
             <el-button @click="redo">重做</el-button>
-            <label for="input" class="insert">插入图片</label>
+            <label for="input" class="insert">插入Image</label>
             <input type="file" @change="handleFileChange" id="input" hidden />
             <el-button @click="preview" style="margin-left: 10px;">预览</el-button>
             <el-button @click="save">保存</el-button>
@@ -137,7 +137,7 @@ export default {
         handleFileChange(e) {
             const file = e.target.files[0]
             if (!file.type.includes('image')) {
-                toast('只能插入图片')
+                toast('只能插入Image')
                 return
             }
 
@@ -150,8 +150,8 @@ export default {
                         component: {
                             ...commonAttr,
                             id: generateID(),
-                            component: 'Picture',
-                            label: '图片',
+                            component: 'Image',
+                            label: 'Image',
                             icon: '',
                             propValue: fileResult,
                             style: {

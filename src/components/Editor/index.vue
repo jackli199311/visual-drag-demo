@@ -27,7 +27,7 @@
                 :is="item.component"
                 :style="getComponentStyle(item.style)"
                 :propValue="item.propValue"
-                :actionValue="item.actionValue"
+                :targetValue="item.targetValue"
                 :dataSource="item.dataSource"
                 :element="item"
                 :id="'component' + item.id"

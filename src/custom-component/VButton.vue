@@ -11,7 +11,11 @@ export default {
             type: String,
             default: '',
         },
-        actionValue: {
+        targetValue: {
+            type: String,
+            default: '',
+        },
+        action: {
             type: String,
             default: '',
         },
@@ -25,9 +29,9 @@ export default {
     },
     methods: {
         performAction() {
-            if (this.actionValue) {
-                this.$store.commit('updateSource', { key: this.actionValue, value: 'test' })
-                console.log(this.$store.state.custom[this.actionValue])
+            if (this.targetValue) {
+                this.$store.commit('updateSource', { key: this.targetValue, value: 'test' })
+                console.log(this.$store.state.custom[this.targetValue])
             }
         },
     },

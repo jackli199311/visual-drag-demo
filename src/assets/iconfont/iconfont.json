@@ -14,7 +14,7 @@
     },
     {
       "icon_id": "2187794",
-      "name": "图片",
+      "name": "Image",
       "font_class": "tupian",
       "unicode": "e616",
       "unicode_decimal": 58902
@@ -28,7 +28,7 @@
     },
     {
       "icon_id": "6266248",
-      "name": "矩形",
+      "name": "Rect",
       "font_class": "juxing",
       "unicode": "e790",
       "unicode_decimal": 59280
@@ -42,7 +42,7 @@
     },
     {
       "icon_id": "16859933",
-      "name": "按钮",
+      "name": "Button",
       "font_class": "button",
       "unicode": "e648",
       "unicode_decimal": 58952

@@ -9,7 +9,7 @@ export const commonAttr = {
     events: {},
     groupStyle: {}, // 当一个组件成为 Group 的子组件时使用
     isLock: false, // 是否锁定组件
-    actionValue: '',
+    targetValue: '',
     dataSource: '',
 }
 
@@ -17,8 +17,8 @@ export const commonAttr = {
 const list = [
     {
         component: 'v-text',
-        label: '文字',
-        propValue: '双击编辑文字',
+        label: 'Text',
+        propValue: '双击编辑Text',
         icon: 'wenben',
         style: {
             width: 200,
@@ -33,8 +33,8 @@ const list = [
     },
     {
         component: 'v-button', 
-        label: '按钮', 
-        propValue: '按钮',
+        label: 'Button', 
+        propValue: 'Button',
         icon: 'button',
         style: {
             width: 100,
@@ -52,8 +52,8 @@ const list = [
         },
     },
     {
-        component: 'Picture', 
-        label: '图片', 
+        component: 'Image', 
+        label: 'Image', 
         icon: 'tupian',
         propValue: require('@/assets/title.jpg'),
         style: {
@@ -64,7 +64,7 @@ const list = [
     },
     {
         component: 'rect-shape',
-        label: '矩形',
+        label: 'Rect',
         propValue: '&nbsp;',
         icon: 'juxing',
         style: {

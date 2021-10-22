@@ -40,8 +40,11 @@
             <el-form-item label="Data Source">
                 <el-input type="text" v-model="curComponent.dataSource" />
             </el-form-item>
+            <el-form-item label="Target">
+                <el-input type="textarea" v-model="curComponent.targetValue" />
+            </el-form-item>
             <el-form-item label="Action">
-                <el-input type="textarea" v-model="curComponent.actionValue" />
+                <el-input type="textarea" v-model="curComponent.action" />
             </el-form-item>
         </el-form>
     </div>
@@ -53,7 +56,7 @@ import attrNameData from '@/utils/attrNameData'
 export default {
     data() {
         return {
-            excludes: ['Picture', 'Group'], // 这些组件不显示内容
+            excludes: ['Image', 'Group'], // 这些组件不显示内容
             textAlignOptions: [
                 {
                     label: '左对齐',

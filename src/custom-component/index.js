@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 const components = [
-    'Picture',
+    'Image',
     'VText',
     'VButton',
     'Group',
